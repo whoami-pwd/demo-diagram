@@ -38,6 +38,7 @@ graph TB
         BUILD[Automated Builds]
     end
 
+    %% Add more vertical space between connections
     CW -->|Monitors| CACHE
     CW -->|Tracks| LATENCY
     NR -->|Analyzes| USER
@@ -46,4 +47,11 @@ graph TB
     GEO -->|Enforces Regional Access| ORG
     IAM -->|Controls| GDPR
     BUILD -->|Updates| STATIC
+
+    %% Add some spacing nodes to increase height
+    SPACER1[" "]
+    SPACER2[" "]
+    SPACER1 --- SPACER2
+    style SPACER1 fill:none,stroke:none
+    style SPACER2 fill:none,stroke:none
 ```
